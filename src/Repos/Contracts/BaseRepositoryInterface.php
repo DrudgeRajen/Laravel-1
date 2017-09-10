@@ -121,5 +121,19 @@ interface BaseRepositoryInterface
      */
      public function checkDuplicates($filter=[], $id = []);
 
+    /**
+     * @param array $with
+     * @param null $id
+     * @return mixed
+     */
+    public function getDataWithRelationModelById(array $with, $id = null);
+
+    /**
+     * @param array $where
+     * @param array $with
+     * @return mixed
+     */
+    public function getAllByWhereAndRelationModel(array $where, array $with);
+
 
 }
